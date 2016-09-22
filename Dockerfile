@@ -23,7 +23,7 @@ RUN \
  curl -o \
  /tmp/jacket.tar.gz -L \
 	https://github.com/Jackett/Jackett/releases/download/$jack_tag/Jackett.Binaries.Mono.tar.gz && \
- tar xvf \
+ tar xf \
  /tmp/jacket.tar.gz -C \
 	/app/Jackett --strip-components=1 && \
 
