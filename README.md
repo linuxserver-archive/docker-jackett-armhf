@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/jackett
-[![](https://images.microbadger.com/badges/image/lsioarmhf/jackett.svg)](https://microbadger.com/images/lsioarmhf/jackett "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/jackett.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/jackett.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-jackett)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-jackett/)
+[![](https://images.microbadger.com/badges/version/lsioarmhf/jackett.svg)](https://microbadger.com/images/lsioarmhf/jackett "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/jackett.svg)](https://microbadger.com/images/lsioarmhf/jackett "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/jackett.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/jackett.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-jackett)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-jackett/)
 [hub]: https://hub.docker.com/r/lsioarmhf/jackett/
 
 Jackett works as a proxy server: it translates queries from apps (Sonarr, SickRage, CouchPotato, Mylar, etc) into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches. Jackett is a single repository of maintained indexer scraping & translation logic - removing the burden from other apps.[Jackett](https://github.com/Jackett/Jackett)
@@ -64,8 +64,15 @@ More info at [Jackett](https://github.com/Jackett/Jackett).
 
 * To monitor the logs of the container in realtime `docker logs -f jackett`.
 
+* container version number 
 
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' jackett`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmhf/jackett`
 
 ## Versions
 
++ **14-10-16:** Add version layer information.
 + **22.09.16:** Initial Release.
