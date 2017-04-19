@@ -1,4 +1,4 @@
-FROM lsiobase/xenial.armhf
+FROM lsiobase/mono.armhf
 MAINTAINER sparklyballs
 
 # set version label
@@ -15,9 +15,6 @@ XDG_CONFIG_HOME="/config"
 RUN \
  apt-get update && \
  apt-get install -y \
-	bzip2 \
-	libcurl4-openssl-dev \
-	libmono-cil-dev \
 	wget && \
 
 # install Jackett
@@ -37,7 +34,7 @@ RUN \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
-	/var/tmp/* 
+	/var/tmp/*
 
 # add local files
 COPY root/ /
