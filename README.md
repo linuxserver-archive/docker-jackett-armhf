@@ -81,6 +81,7 @@ More info at [Jackett](https://github.com/Jackett/Jackett).
 
 ## Versions
 
++ **09.02.18:** Add --NoUpdates flag.
 + **26.01.18:** Fix continuation lines.
 + **19.04.17:** Switch to using inhouse mono baseimage, ubuntu xenial based.
 + **14.10.16:** Add version layer information.
